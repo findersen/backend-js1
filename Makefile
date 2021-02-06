@@ -21,4 +21,4 @@ publish:
 
 commit:
 	git add .
-	node src/commit.js
+	node bin/commit.js

@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/findersen/backend-project-lvl1#readme",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "commit": "bin/commit.js"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
