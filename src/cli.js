@@ -12,7 +12,7 @@ const brainEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
   const nums = [15, 6, 7]
   const wrong = (answer, correct, name) => {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${correct}.\nLet\'s try again, ${name}!`)
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${correct}.\nLet's try again, ${name}!`)
     return false
   }
   let congrat = true

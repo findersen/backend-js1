@@ -1,5 +1,5 @@
-# Hexlet tests and linter status
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+# backend-project-lvl1
+[![Maintainability](https://api.codeclimate.com/v1/badges/69e5edda153d1f41ad39/maintainability)](https://codeclimate.com/github/findersen/backend-project-lvl1/maintainability)
 
 ## Brain Even
-https://asciinema.org/a/oWmdH8BJnDaECRhotKfXUEQqH
+[Аскинема с примером](https://asciinema.org/a/oWmdH8BJnDaECRhotKfXUEQqH)
