@@ -18,3 +18,7 @@ brain-games:
 
 publish:
 	npm publish --dry-run
+
+commit:
+	git add .
+	node src/commit.js
