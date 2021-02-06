@@ -6,8 +6,7 @@ const execRun = (command) => {
     if (error) {
       console.log(`error: ${error.message}`)
       return
-    }
-    else if (stderr) {
+    } else if (stderr) {
       console.log(`stderr: ${stderr}`)
       return
     }
