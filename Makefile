@@ -20,5 +20,4 @@ publish:
 	npm publish --dry-run
 
 commit:
-	git add .
 	node bin/commit.js
