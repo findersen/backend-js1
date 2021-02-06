@@ -12,7 +12,7 @@ const execRun = (command, delay = 1000) => {
         return
       }
       console.log(`stdout: ${stdout}`)
-    })}, delay)
+    }) }, delay)
 }
 
 export default () => {

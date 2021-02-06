@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync'
 
-const hello = () => {
+const brainHello = () => {
   console.log('Welcome to the Brain Games!\nMay I have your name?')
   const name = readlineSync.question('Your answer: ')
   console.log(`Hello, ${name}!`)
   return name
 }
 
-const even = () => {
-  const name = hello()
+const brainEven = () => {
+  const name = brainHello()
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
   const nums = [15, 6, 7]
   const wrong = (answer, correct, name) => {
@@ -18,8 +18,8 @@ const even = () => {
   let congrat = true
   for (const v of nums) {
     console.log(v)
-    let answer = String(readlineSync.question('Your answer: '))
-    let correct = evenOdd(v)
+    const answer = String(readlineSync.question('Your answer: '))
+    const correct = evenOdd(v)
     if (answer === 'yes' || answer === 'no') {
       if (answer === correct) {
         console.log('Correct!')
@@ -40,4 +40,4 @@ function evenOdd (num) {
   return 'yes'
 }
 
-export { hello, even }
+export { brainHello, brainEven }
