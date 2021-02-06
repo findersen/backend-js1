@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { brainHello } from '../src/cli.js'
+import { brainEven } from '../src/cli.js'
 
-brainHello()
+brainEven()
