@@ -20,5 +20,8 @@ export default () => {
   if (commitName !== 'stop') {
     execRun('git add .')
     execRun(`git commit -m '${commitName}'`)
+    execRun('git status')
+  } else {
+    console.log('Commit stopped!')
   }
 }
