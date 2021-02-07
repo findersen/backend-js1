@@ -21,3 +21,6 @@ publish:
 
 commit:
 	node bin/commit.js
+
+rec:
+	asciinema rec

@@ -1,7 +1,19 @@
 import { exec } from 'child_process'
 import readlineSync from 'readline-sync'
 
-const execRun = (command, delay = 1000) => {
+export default () => {
+  const commitName = String(readlineSync.question('Commit name: '))
+
+  if (commitName !== 'stop') {
+    execRun('git add .')
+    execRun(`git commit -m "${commitName}"`, 2000)
+    execRun('git status')
+  } else {
+    console.log('Commit stopped!')
+  }
+}
+
+function execRun (command, delay = 1000) {
   setTimeout(function () {
     exec(command, (error, stdout, stderr) => {
       if (error) {
@@ -14,16 +26,4 @@ const execRun = (command, delay = 1000) => {
       console.log(`stdout: ${stdout}`)
     })
   }, delay)
-}
-
-export default () => {
-  const commitName = String(readlineSync.question('Commit name: '))
-
-  if (commitName !== 'stop') {
-    execRun('git add .')
-    execRun(`git commit -m '${commitName}'`)
-    execRun('git status')
-  } else {
-    console.log('Commit stopped!')
-  }
 }
