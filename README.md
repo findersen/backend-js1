@@ -6,3 +6,6 @@
 
 ## Brain Calculator
 [Video](https://asciinema.org/a/4k0nhf7No3jlJClBSmZrbmyAA)
+
+## Brain GCD
+[Video](https://asciinema.org/a/qP3qJzdFR4lQARSo2VXziyGD9)
