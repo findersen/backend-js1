@@ -1,5 +1,4 @@
 import _ from 'lodash'
-import readlineSync from 'readline-sync'
 import helper from '../src/helper.js'
 
 const brainEven = () => {
@@ -31,11 +30,7 @@ const brainEven = () => {
 
 const brainCalc = () => {
   const name = helper.brainHello()
-  let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
-  if (gameLength < 2) {
-    console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
-    gameLength = 3
-  }
+  const gameLength = 3
   console.log('What is the result of the expression?')
 
   const operators = ['+', '-', '*']
@@ -63,11 +58,7 @@ const brainCalc = () => {
 
 const brainGcd = () => {
   const name = helper.brainHello()
-  let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
-  if (gameLength < 2) {
-    console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
-    gameLength = 3
-  }
+  const gameLength = 3
   console.log('Find the greatest common divisor of given numbers.')
 
   let congrat = true
@@ -91,24 +82,20 @@ const brainGcd = () => {
 }
 
 const brainProgression = () => {
-  const LINE_LENGTH = 10
+  const lineLength = 10
+  const gameLength = 3
   const name = helper.brainHello()
-  let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
-  if (gameLength < 2) {
-    console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
-    gameLength = 3
-  }
   console.log('What number is missing in the progression?')
 
   let congrat = true
   for (let i = 0; i < gameLength; i += 1) {
 
     const nums = []
-    const space = _.random(0, LINE_LENGTH - 1)
+    const space = _.random(0, lineLength - 1)
     const step = _.random(5, 20)
     let start = _.random(0, 20)
 
-    for (let i = 0; i < LINE_LENGTH; i += 1) {
+    for (let i = 0; i < lineLength; i += 1) {
       nums.push(start += step)
     }
     const correct = nums[space]
