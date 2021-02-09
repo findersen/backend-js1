@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import readlineSync from 'readline-sync'
-import aux from '../src/auxiliary.js'
+import helper from '../src/helper.js'
 
 const brainEven = () => {
   const name = aux.brainHello()
@@ -30,7 +30,7 @@ const brainEven = () => {
 }
 
 const brainCalc = () => {
-  const name = aux.brainHello()
+  const name = helper.brainHello()
   let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
   if (gameLength < 2) {
     console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
@@ -48,13 +48,13 @@ const brainCalc = () => {
 
     console.log(`Question: ${num1} ${operator} ${num2}`)
 
-    const correct = aux.arithmetic(num1, num2, operator)
-    const answer = Number(aux.userAnsver())
+    const correct = helper.arithmetic(num1, num2, operator)
+    const answer = Number(helper.userAnsver())
 
     if (answer === correct) {
       console.log('Correct!')
     } else {
-      congrat = aux.wrongAnsver(answer, correct, name)
+      congrat = helper.wrongAnsver(answer, correct, name)
       break
     }
   }
@@ -62,7 +62,7 @@ const brainCalc = () => {
 }
 
 const brainGcd = () => {
-  const name = aux.brainHello()
+  const name = helper.brainHello()
   let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
   if (gameLength < 2) {
     console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
@@ -77,17 +77,54 @@ const brainGcd = () => {
 
     console.log(`Question: ${num1} ${num2}`)
 
-    const correct = aux.gcd(num1, num2)
-    const answer = Number(aux.userAnsver())
+    const correct = helper.gcd(num1, num2)
+    const answer = Number(helper.userAnsver())
 
     if (answer === correct) {
       console.log('Correct!')
     } else {
-      congrat = aux.wrongAnsver(answer, correct, name)
+      congrat = helper.wrongAnsver(answer, correct, name)
       break
     }
   }
   if (congrat) console.log(`Congratulations, ${name}`)
 }
 
-export { brainEven, brainCalc, brainGcd }
+const brainProgression = () => {
+  const LINE_LENGTH = 10
+  const name = helper.brainHello()
+  let gameLength = readlineSync.question('How many questions are you willing to answer?: ')
+  if (gameLength < 2) {
+    console.log('The answer is wrong, you have to answer at least 3 questions. I believe in you! :)')
+    gameLength = 3
+  }
+  console.log('What number is missing in the progression?')
+
+  let congrat = true
+  for (let i = 0; i < gameLength; i += 1) {
+
+    const nums = []
+    const space = _.random(0, LINE_LENGTH)
+    const step = _.random(5, 20)
+    let start = _.random(0, 20)
+
+    for (let i = 0; i < LINE_LENGTH; i += 1) {
+      nums.push(start += step)
+    }
+    const correct = nums[space]
+    nums[space] = '..'
+
+    console.log(`Question: ${nums.join(' ')}`)
+    const answer = Number(helper.userAnsver())
+
+    if (answer === correct) {
+      console.log('Correct!')
+    } else {
+      congrat = helper.wrongAnsver(answer, correct, name)
+      break
+    }
+  }
+  if (congrat) console.log(`Congratulations, ${name}`)
+}
+
+export { brainEven, brainCalc, brainGcd, brainProgression }
