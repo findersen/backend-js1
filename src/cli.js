@@ -104,7 +104,7 @@ const brainProgression = () => {
   for (let i = 0; i < gameLength; i += 1) {
 
     const nums = []
-    const space = _.random(0, LINE_LENGTH)
+    const space = _.random(0, LINE_LENGTH - 1)
     const step = _.random(5, 20)
     let start = _.random(0, 20)
 

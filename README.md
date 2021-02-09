@@ -9,3 +9,6 @@
 
 ## Brain GCD
 [Video](https://asciinema.org/a/qP3qJzdFR4lQARSo2VXziyGD9)
+
+## Brain Progression
+[Video](https://asciinema.org/a/yFLMJD6AMDUnPC5V3ON7c8TBa)
