@@ -12,9 +12,10 @@ const brainEven = () => {
   ]
   let congrat = true
   for (const v of nums) {
-    console.log(v)
+    console.log(`Question: ${v}`)
 
     const answer = helper.userAnsver()
+    console.log(answer)
     const correct = helper.evenOdd(v)
 
     if (answer === 'yes' || answer === 'no') {
