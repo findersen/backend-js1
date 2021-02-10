@@ -5,7 +5,11 @@ const brainEven = () => {
   const name = helper.brainHello()
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
-  const nums = [15, 6, 7]
+  const nums = [
+    _.random(0, 50),
+    _.random(0, 50),
+    _.random(0, 50),
+  ]
   let congrat = true
   for (const v of nums) {
     console.log(v)
