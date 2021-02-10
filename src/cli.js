@@ -2,7 +2,7 @@ import _ from 'lodash'
 import helper from '../src/helper.js'
 
 const brainEven = () => {
-  const name = aux.brainHello()
+  const name = helper.brainHello()
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   const nums = [15, 6, 7]
@@ -10,18 +10,18 @@ const brainEven = () => {
   for (const v of nums) {
     console.log(v)
 
-    const answer = aux.userAnsver()
-    const correct = aux.evenOdd(v)
+    const answer = helper.userAnsver()
+    const correct = helper.evenOdd(v)
 
     if (answer === 'yes' || answer === 'no') {
       if (answer === correct) {
         console.log('Correct!')
       } else {
-        congrat = aux.wrongAnsver(answer, correct, name)
+        congrat = helper.wrongAnsver(answer, correct, name)
         break
       }
     } else {
-      congrat = aux.wrongAnsver(answer, correct, name)
+      congrat = helper.wrongAnsver(answer, correct, name)
       break
     }
   }
@@ -114,4 +114,31 @@ const brainProgression = () => {
   if (congrat) console.log(`Congratulations, ${name}`)
 }
 
-export { brainEven, brainCalc, brainGcd, brainProgression }
+const brainPrime = () => {
+  const name = helper.brainHello()
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
+
+  const nums = [83, 12, 7]
+  let congrat = true
+  for (const v of nums) {
+    console.log(`Question: ${v}`)
+
+    const answer = helper.userAnsver()
+    const correct = helper.isPrime(v)
+
+    if (answer === 'yes' || answer === 'no') {
+      if (answer === correct) {
+        console.log('Correct!')
+      } else {
+        congrat = helper.wrongAnsver(answer, correct, name)
+        break
+      }
+    } else {
+      congrat = helper.wrongAnsver(answer, correct, name)
+      break
+    }
+  }
+  if (congrat) console.log(`Congratulations, ${name}`)
+}
+
+export { brainEven, brainCalc, brainGcd, brainProgression, brainPrime }

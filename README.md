@@ -12,3 +12,6 @@
 
 ## Brain Progression
 [Video](https://asciinema.org/a/yFLMJD6AMDUnPC5V3ON7c8TBa)
+
+## Brain Prime
+[Video](https://asciinema.org/a/N5d1A1BPrsPfNFJXYK0zLBFh6)
